@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_base/app_state.dart';
-import 'package:flutter_base/screens/home/children/favorites/children/big_card/big_card.dart';
+import 'package:flutter_base/screens/home/children/generator/views/big_card.dart';
 import 'package:provider/provider.dart';
 
 class GeneratorScreen extends StatelessWidget {

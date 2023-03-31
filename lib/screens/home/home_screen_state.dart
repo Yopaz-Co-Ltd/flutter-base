@@ -22,6 +22,9 @@ class HomeScreenState extends State<HomeScreen> {
 
     return LayoutBuilder(builder: (context, constraints) {
       return Scaffold(
+        appBar: AppBar(
+          title: Text("Home"),
+        ),
         body: Row(
           children: [
             SafeArea(
