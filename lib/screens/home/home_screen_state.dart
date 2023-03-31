@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_base/assets/translations/localization.dart';
 import 'package:flutter_base/screens/home/children/favorites/favorites_screen.dart';
 import 'package:flutter_base/screens/home/children/generator/generator_screen.dart';
 import 'package:flutter_base/screens/home/home_screen.dart';
@@ -10,34 +11,31 @@ class HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     Widget page;
     switch (selectedIndex) {
-      case 0:
-        page = GeneratorScreen();
-        break;
       case 1:
         page = FavoritesScreen();
         break;
       default:
-        throw UnimplementedError('no widget for $selectedIndex');
+        page = GeneratorScreen();
     }
 
     return LayoutBuilder(builder: (context, constraints) {
       return Scaffold(
         appBar: AppBar(
-          title: Text("Home"),
+          title: Text(LocalizationText.home),
         ),
         body: Row(
           children: [
             SafeArea(
               child: NavigationRail(
                 extended: constraints.maxWidth >= 600,
-                destinations: const [
+                destinations: [
                   NavigationRailDestination(
                     icon: Icon(Icons.home),
-                    label: Text('Home'),
+                    label: Text(LocalizationText.home),
                   ),
                   NavigationRailDestination(
                     icon: Icon(Icons.favorite),
-                    label: Text('Favorites'),
+                    label: Text(LocalizationText.favorite),
                   ),
                 ],
                 selectedIndex: selectedIndex,

@@ -2,15 +2,9 @@
 
 Flutter Base
 
-## Getting Started
+## Usage
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Localization usage
+    1. Add new translated text into `lib/assets/translations/en.json` and `lib/assets/translations/vi.json`
+    2. Add a new corresponding enum into `lib/assets/translations/localization.dart`
+    3. Use `Localization.text.tr()` in code line

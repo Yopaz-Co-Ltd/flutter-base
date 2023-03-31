@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_base/assets/translations/localization.dart';
 import 'package:flutter_base/screens/home/home_screen.dart';
 import 'package:flutter_base/screens/login/views/login_button.dart';
 
@@ -7,7 +8,7 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Login"),
+        title: Text(LocalizationText.login),
       ),
       body: SafeArea(
           child: Column(

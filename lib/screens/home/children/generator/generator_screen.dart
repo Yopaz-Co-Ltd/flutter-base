@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_base/app_state.dart';
+import 'package:flutter_base/assets/translations/localization.dart';
 import 'package:flutter_base/screens/home/children/generator/views/big_card.dart';
 import 'package:provider/provider.dart';
 
@@ -32,14 +33,14 @@ class GeneratorScreen extends StatelessWidget {
                   appState.toggleFavorite();
                 },
                 icon: Icon(icon),
-                label: const Text('Like'),
+                label: Text(LocalizationText.favorite),
               ),
               const SizedBox(width: 10),
               ElevatedButton(
                 onPressed: () {
                   appState.getNext();
                 },
-                child: const Text('Next'),
+                child: Text(LocalizationText.next),
               ),
             ],
           ),

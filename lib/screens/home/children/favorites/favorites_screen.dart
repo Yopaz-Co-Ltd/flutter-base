@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_base/app_state.dart';
+import 'package:flutter_base/assets/translations/localization.dart';
 import 'package:provider/provider.dart';
 
 class FavoritesScreen extends StatelessWidget {
@@ -13,7 +14,7 @@ class FavoritesScreen extends StatelessWidget {
     return SafeArea(
       child: ListView(
         children: [
-          Text("There are ${favorites.length} items"),
+          Text(LocalizationText.favoritesCount(favorites.length)),
           ...favorites.map((favorite) {
             return Padding(
               padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
