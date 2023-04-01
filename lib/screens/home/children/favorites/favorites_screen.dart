@@ -8,8 +8,8 @@ class FavoritesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var appState = context.watch<AppState>();
-    var favorites = appState.favorites;
+    final appState = context.watch<AppState>();
+    final favorites = appState.favorites;
 
     return SafeArea(
       child: ListView(

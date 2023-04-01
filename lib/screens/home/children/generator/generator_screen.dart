@@ -9,8 +9,8 @@ class GeneratorScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var appState = context.watch<AppState>();
-    var pair = appState.current;
+    final appState = context.watch<AppState>();
+    final pair = appState.current;
 
     IconData icon;
     if (appState.favorites.contains(pair)) {

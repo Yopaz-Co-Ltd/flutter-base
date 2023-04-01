@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_base/apis/api.dart';
 import 'package:flutter_base/assets/translations/localization.dart';
+import 'package:flutter_base/screens/home/home_screen_arguments.dart';
 import 'package:flutter_base/screens/login/views/login_button.dart';
+import 'package:flutter_base/screens/screen_names.dart';
 import 'package:flutter_base/widgets/loading/loading.dart';
 
 import '../../utils/navigation_utils.dart';
-import '../home/home_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
@@ -22,8 +23,9 @@ class LoginScreen extends StatelessWidget {
               Loading.show(context);
               Api.instance.login().then((result) {
                 Loading.dismiss(context);
-                print(result.data?.name);
-                NavigationUtils.navigate(context, HomeScreen());
+                NavigationUtils.navigate(context, ScreenName.home,
+                    arguments:
+                        HomeScreenArguments(userName: result.data?.name));
               });
             },
           )

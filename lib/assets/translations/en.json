@@ -3,5 +3,6 @@
   "home": "Home",
   "favorite": "Favorite",
   "next": "Next",
-  "favorites_count": "There are {} items"
+  "favorites_count": "There are {} items",
+  "home_hello_user": "Hello, {}"
 }

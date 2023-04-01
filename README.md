@@ -4,7 +4,12 @@ Flutter Base
 
 ## Usage
 
-1. Localization usage
+1. Add a new screen
+   1. Create a new folder in `lib/ui/screens` folder, for example `login`
+   2. Create a new file `login_screen.dart` in `lib/ui/screens/login` folder
+   3. Add screen name in `lib/screens/screen_names.dart`
+
+2. Localization usage
     1. Add new translated text into `lib/assets/translations/en.json` and `lib/assets/translations/vi.json`
     2. Add a new corresponding enum into `lib/assets/translations/localization.dart`
     3. Use `Localization.text.tr()` in code line

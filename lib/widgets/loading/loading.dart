@@ -4,7 +4,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 class Loading extends StatelessWidget {
   static var isLoadingShown = false;
 
-  static Widget centerLoadingWidget = Center(
+  static final Widget centerLoadingWidget = Center(
     child: Loading(),
   );
 

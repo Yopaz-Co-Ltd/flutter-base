@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_base/app_state.dart';
 import 'package:flutter_base/screens/login/login_screen.dart';
+import 'package:flutter_base/screens/screen_names.dart';
 import 'package:provider/provider.dart';
 
 class App extends StatelessWidget {
@@ -20,6 +21,7 @@ class App extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
         ),
         home: LoginScreen(),
+        routes: screenRoutes,
       ),
     );
   }

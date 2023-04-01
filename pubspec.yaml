@@ -20,13 +20,14 @@ dependencies:
   json_annotation: ^4.8.0
   dio: ^5.1.1
   flutter_spinkit: ^5.1.0
+  fluttertoast: ^8.2.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   flutter_lints: ^2.0.0
-  retrofit_generator: '>=5.0.0 <6.0.0'
+  retrofit_generator: ^6.0.0+1
   build_runner: '>=2.3.0 <4.0.0'
   json_serializable: ^6.6.1
 

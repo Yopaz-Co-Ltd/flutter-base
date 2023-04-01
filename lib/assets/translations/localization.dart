@@ -8,4 +8,7 @@ class LocalizationText {
 
   static String favoritesCount(int count) =>
       "favorites_count".tr(args: [count.toString()]);
+
+  static String homeHelloUser(String userName) =>
+      "home_hello_user".tr(args: [userName]);
 }

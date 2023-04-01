@@ -8,7 +8,7 @@ part 'api.g.dart';
 
 @RestApi(baseUrl: "https://demo6587384.mockable.io/")
 abstract class Api {
-  static Api instance = Api(Dio());
+  static final Api instance = Api(Dio());
 
   factory Api(Dio dio, {String baseUrl}) = _Api;
 
