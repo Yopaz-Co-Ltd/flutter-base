@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_base/apis/api.dart';
 import 'package:flutter_base/assets/translations/localization.dart';
-import 'package:flutter_base/screens/home/home_screen.dart';
 import 'package:flutter_base/screens/login/views/login_button.dart';
-import 'package:flutter_base/utils/navigation_utils.dart';
+
+import '../../utils/navigation_utils.dart';
+import '../home/home_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
@@ -16,7 +18,10 @@ class LoginScreen extends StatelessWidget {
         children: [
           LoginButton(
             onPressed: () {
-              NavigationUtils.navigate(context, HomeScreen());
+              Api.instance.login().then((result) {
+                print(result.data?.name);
+                NavigationUtils.navigate(context, HomeScreen());
+              });
             },
           )
         ],
