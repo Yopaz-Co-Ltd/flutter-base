@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_base/assets/translations/localization.dart';
 import 'package:flutter_base/screens/home/home_screen.dart';
 import 'package:flutter_base/screens/login/views/login_button.dart';
+import 'package:flutter_base/utils/navigation_utils.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
@@ -15,8 +16,7 @@ class LoginScreen extends StatelessWidget {
         children: [
           LoginButton(
             onPressed: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => HomeScreen()));
+              NavigationUtils.navigate(context, HomeScreen());
             },
           )
         ],
