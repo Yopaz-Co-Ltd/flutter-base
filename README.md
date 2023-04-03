@@ -13,7 +13,7 @@ Flutter Base
     1. Add new translated text into `lib/assets/translations/en.json` and `lib/assets/translations/vi.json`
     2. Add a new corresponding enum into `lib/assets/translations/localization.dart`
     3. Use `Localization.text.tr()` in code line
-2. Call api - this base uses Retrofit to call api
+3. Call api - this base uses Retrofit to call api
     1. If you create a new api, you need to add a new function into `lib/data/apis/api.dart`, for example <br />
        `@POST("login")`
        <br/>

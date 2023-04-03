@@ -9,15 +9,21 @@ import 'package:fluttertoast/fluttertoast.dart';
 
 class HomeScreenState extends State<HomeScreen> {
   var selectedIndex = 0;
+  var isHelloUserShown = false;
 
   @override
   Widget build(BuildContext context) {
-    final homeScreenArguments =
-        NavigationUtils.getArguments<HomeScreenArguments>(context);
-    final userName = homeScreenArguments?.userName;
-    final helloUserName =
-        userName != null ? LocalizationText.homeHelloUser(userName) : "";
-    Fluttertoast.showToast(msg: helloUserName);
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (isHelloUserShown) return;
+      isHelloUserShown = true;
+
+      final homeScreenArguments =
+          NavigationUtils.getArguments<HomeScreenArguments>(context);
+      final userName = homeScreenArguments?.userName;
+      final helloUserName =
+          userName != null ? LocalizationText.homeHelloUser(userName) : "";
+      Fluttertoast.showToast(msg: helloUserName);
+    });
 
     Widget page;
     switch (selectedIndex) {
