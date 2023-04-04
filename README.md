@@ -31,3 +31,4 @@ Flutter Base
     4. Run `flutter pub run build_runner build` to generate api and model object
     5. In the usage, you can call api like this <br />
        `Api.instance.login().then((it) => print(it.data?.age ?? 0));`
+4. Config environment

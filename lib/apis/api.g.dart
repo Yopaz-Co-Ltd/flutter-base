@@ -12,9 +12,7 @@ class _Api implements Api {
   _Api(
     this._dio, {
     this.baseUrl,
-  }) {
-    baseUrl ??= 'https://demo6587384.mockable.io/';
-  }
+  });
 
   final Dio _dio;
 
