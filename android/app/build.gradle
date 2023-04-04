@@ -11,19 +11,18 @@ if (flutterRoot == null) {
     throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
 }
 
-def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
-if (flutterVersionCode == null) {
-    flutterVersionCode = '1'
-}
-
-def flutterVersionName = localProperties.getProperty('flutter.versionName')
-if (flutterVersionName == null) {
-    flutterVersionName = '1.0'
-}
-
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+
+project.ext.envConfigFiles = [
+        developdebug  : ".env.develop",
+        developrelease: ".env.develop",
+        stagingdebug  : ".env.staging",
+        stagingrelease: ".env.staging",
+        productdebug  : ".env.product",
+        productrelease: ".env.product",
+]
 apply from: project(':flutter_config').projectDir.getPath() + "/dotenv.gradle"
 
 android {
@@ -44,22 +43,25 @@ android {
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.example.flutter_base"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
+        applicationId project.env.get("ANDROID_APP_ID")
         minSdkVersion flutter.minSdkVersion
         targetSdkVersion flutter.targetSdkVersion
-        versionCode flutterVersionCode.toInteger()
-        versionName flutterVersionName
+        versionCode project.env.get("ANDROID_APP_VERSION_CODE").toInteger()
+        versionName project.env.get("ANDROID_APP_VERSION_NAME")
+        resValue "string", "build_config_package", "com.example.flutter_base"
     }
 
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig signingConfigs.debug
         }
+    }
+
+    flavorDimensions "environment"
+    productFlavors {
+        develop
+        staging
+        product
     }
 }
 
