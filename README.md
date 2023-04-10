@@ -9,11 +9,11 @@ Flutter Base
    2. Create a new file `login_screen.dart` in `lib/ui/screens/login` folder
    3. Add screen name in `lib/screens/screen_names.dart`
 
-2. Localization usage
+2. Localization usage: https://pub.dev/packages/easy_localization
     1. Add new translated text into `lib/assets/translations/en.json` and `lib/assets/translations/vi.json`
     2. Add a new corresponding enum into `lib/assets/translations/localization.dart`
     3. Use `Localization.text.tr()` in code line
-3. Call api - this base uses Retrofit to call api
+3. Call api - this base uses Retrofit to call api: https://pub.dev/packages/retrofit
     1. If you create a new api, you need to add a new function into `lib/data/apis/api.dart`, for example <br />
        `@POST("login")`
        <br/>
@@ -31,5 +31,10 @@ Flutter Base
     4. Run `flutter pub run build_runner build` to generate api and model object
     5. In the usage, you can call api like this <br />
        `Api.instance.login().then((it) => print(it.data?.age ?? 0));`
-4. Config environment
+4. Config environment: https://pub.dev/packages/flutter_config
    1. If Android app fails to build with `buildConfigFields`, please check this comment https://github.com/ByneappLLC/flutter_config/issues/31#issuecomment-1225748517
+5. State Management - Bloc
+   1. https://bloclibrary.dev/#/gettingstarted
+   2. Sample: https://bloclibrary.dev/#/flutterlogintutorial
+6. SharedPreferences: https://pub.dev/packages/shared_preferences
+7. Toast: https://pub.dev/packages/fluttertoast
