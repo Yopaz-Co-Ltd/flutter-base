@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_base/apis/models/api_response/api_response.dart';
-import 'package:flutter_base/apis/models/user/user.dart';
+import 'package:flutter_base/apis/models/user/user_model.dart';
 import 'package:flutter_base/utils/constants.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 import 'package:retrofit/http.dart';

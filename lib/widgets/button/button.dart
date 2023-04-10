@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_base/assets/translations/localization.dart';
 
-class LoginButton extends StatelessWidget {
-  const LoginButton({super.key, this.onPressed});
-
+class Button extends StatelessWidget {
+  final String? text;
   final VoidCallback? onPressed;
+
+  const Button({super.key, this.text, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class LoginButton extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Text(
-            LocalizationText.login,
+            text ?? "",
             style: TextStyle(fontSize: 18),
           ),
         ),

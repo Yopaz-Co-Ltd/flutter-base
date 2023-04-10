@@ -1,8 +1,7 @@
 {
-  "login": "Login",
+  "login": "Log In",
   "home": "Home",
-  "favorite": "Favorite",
-  "next": "Next",
-  "favorites_count": "There are {} items",
+  "logout": "Log Out",
+  "login_failed": "Log In failed!",
   "home_hello_user": "Hello, {}"
 }

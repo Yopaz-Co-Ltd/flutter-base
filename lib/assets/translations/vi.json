@@ -1,6 +1,6 @@
 {
   "login": "Đăng Nhập",
   "home": "Trang Chủ",
-  "favorite": "Yêu Thích",
-  "next": "Tiếp"
+  "logout": "Đăng Xuất",
+  "login_failed": "Đăng Nhập Thất Bại!"
 }

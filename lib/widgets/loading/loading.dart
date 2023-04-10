@@ -24,6 +24,8 @@ class Loading extends StatelessWidget {
     isLoadingShown = false;
   }
 
+  const Loading({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SpinKitCircle(

@@ -23,6 +23,10 @@ dependencies:
   flutter_spinkit: ^5.1.0
   fluttertoast: ^8.2.1
   flutter_config: ^2.0.0
+  bloc: ^8.1.1
+  flutter_bloc: ^8.0.0
+  equatable: ^2.0.5
+  shared_preferences: ^2.1.0
 
 dev_dependencies:
   flutter_test:
