@@ -11,8 +11,8 @@ Flutter Base
 
 2. Localization usage: https://pub.dev/packages/easy_localization
     1. Add new translated text into `lib/assets/translations/en.json` and `lib/assets/translations/vi.json`
-    2. Add a new corresponding enum into `lib/assets/translations/localization.dart`
-    3. Use `Localization.text.tr()` in code line
+    2. Add a new corresponding constant into `lib/assets/translations/localization.dart`
+    3. Use `Localization.text` in code line
 3. Call api - this base uses Retrofit to call api: https://pub.dev/packages/retrofit
     1. If you create a new api, you need to add a new function into `lib/data/apis/api.dart`, for example <br />
        `@POST("login")`
@@ -21,9 +21,9 @@ Flutter Base
     2. If you create a new model object, you need to add a new class into `lib/data/models` folder, for example <br />
        `class UserModel {`
        <br/>
-       `&nbsp;&nbsp;&nbsp;String name;`
+       `    String name;`
        <br/>
-       `&nbsp;&nbsp;&nbsp;String email;`
+       `    String email;`
        <br/>
        `}`
     3. See some examples in `lib/data/apis/api.dart` and `lib/data/models` folder to understand how to create a new api
