@@ -33,6 +33,21 @@ Flutter Base
        `Api.instance.login().then((it) => print(it.data?.age ?? 0));`
 4. Config environment: https://pub.dev/packages/flutter_config
    1. If Android app fails to build with `buildConfigFields`, please check this comment https://github.com/ByneappLLC/flutter_config/issues/31#issuecomment-1225748517
+   2. Sample `.env.develop` below, it has the same format as `.env.staging` and `.env.product`
+      <br/><br/>
+      `ENV=DEVELOP` <br/>
+      `API_URL=https://demo6587384.mockable.io/` <br/><br/>
+
+      `ANDROID_APP_NAME=[D] Flutter Base` <br/>
+      `ANDROID_APP_ID=com.kira.flutterbase.develop` <br/>
+      `ANDROID_APP_VERSION_NAME=0.0.1` <br/>
+      `ANDROID_APP_VERSION_CODE=1` <br/><br/>
+    
+      `IOS_APP_NAME=[D] Flutter Base` <br/>
+      `IOS_APP_ID=com.kira.flutterbase.develop` <br/>
+      `IOS_APP_VERSION_CODE=0.0.1` <br/>
+      `IOS_APP_BUILD_CODE=1` <br/><br/>
+
 5. State Management - Bloc
    1. https://bloclibrary.dev/#/gettingstarted
    2. Sample: https://bloclibrary.dev/#/flutterlogintutorial
