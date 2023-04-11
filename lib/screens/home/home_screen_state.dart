@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_base/assets/translations/localization.dart';
+import 'package:flutter_base/helpers/asset_helper.dart';
+import 'package:flutter_base/helpers/image_helper.dart';
 import 'package:flutter_base/repositories/authentication_reposotory/bloc/authentication_bloc.dart';
 import 'package:flutter_base/repositories/authentication_reposotory/bloc/authentication_event.dart';
 import 'package:flutter_base/screens/home/home_screen.dart';
@@ -27,6 +29,10 @@ class HomeScreenState extends State<HomeScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              ImageHelper.loadFromAssetSvg(AssetHelper.iconLogo,
+                  radius: BorderRadius.all(Radius.circular(50)),
+                  width: 50,
+                  height: 50),
               Center(
                 child: Text(
                   username ?? "",
