@@ -42,4 +42,3 @@ flutter:
   assets:
     - lib/assets/translations/
     - lib/assets/images/
-    - lib/assets/icons/
