@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_base/assets/images/Images.dart';
 import 'package:flutter_base/assets/translations/localization.dart';
-import 'package:flutter_base/helpers/asset_helper.dart';
 import 'package:flutter_base/repositories/authentication_reposotory/bloc/authentication_bloc.dart';
 import 'package:flutter_base/repositories/authentication_reposotory/bloc/authentication_event.dart';
 import 'package:flutter_base/screens/home/home_screen.dart';
@@ -34,12 +34,12 @@ class HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ImageWidget(
-                    imageFilePath: AssetHelper.iconUser,
+                    imageFilePath: Images.iconUser,
                     width: 40,
                     height: 40,
                   ),
                   SvgImageWidget(
-                    imageFilePath: AssetHelper.iconLogo,
+                    imageFilePath: Images.iconLogo,
                     radius: BorderRadius.all(Radius.circular(50)),
                     width: 50,
                     height: 50,
