@@ -41,3 +41,12 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+.env
+.env.*
+!.env.example
+
+**/ios/Flutter/tmp.xcconfig
+ios/.envfile
+/ios/Pods
+/ios/build
