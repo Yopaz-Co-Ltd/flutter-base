@@ -15,6 +15,14 @@ class _AppState extends State<App> {
   final isLogin = true;
 
   @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      context.read<AppStateModel>().checkLoginState();
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     final isLoggedIn = context.watch<AppStateModel>().isLoggedIn;
 

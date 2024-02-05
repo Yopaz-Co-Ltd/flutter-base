@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:project_base/models/state/app_state.dart';
 import 'package:project_base/models/state/login_state.dart';
+import 'package:project_base/utils/constants.dart';
+import 'package:project_base/utils/local_storage_helper.dart';
 import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -25,8 +27,10 @@ class _HomeScreenState extends State<HomeScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Email: ${loginStateModel.email}'),
-            Text('Password: ${loginStateModel.password}'),
+            Text('Email from provider: ${loginStateModel.email}'),
+            Text(
+              'Email from Shared preferences: ${LocalStorageHelper.getString(Constants.prefsEmail)}',
+            ),
             const SizedBox(
               height: 48,
             ),
@@ -35,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 backgroundColor: Colors.blue,
               ),
               onPressed: () {
-                context.read<AppStateModel>().setIsLoggedIn(false);
+                context.read<AppStateModel>().logout();
               },
               child: const Padding(
                 padding: EdgeInsets.symmetric(
