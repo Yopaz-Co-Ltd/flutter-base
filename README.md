@@ -2,6 +2,13 @@
 
 A new Flutter project.
 
+## Setup
+
+1. Install and use fvm
+   - dart pub global activate fvm
+   - fvm install [version]
+   - fvm use [version]
+
 ## Usage
 
 1.  Run app:
